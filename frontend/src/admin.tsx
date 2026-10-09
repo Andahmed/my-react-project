@@ -228,7 +228,7 @@ function Permissions() {
 
 function App() {
   const [authed, setAuthed] = useState(!!sessionStorage.getItem(TOKEN_KEY));
-  const [tab, setTab] = useState<'emp' | 'perm' | 'menu' | 'dlv' | 'stock' | 'po' | 'branches' | 'count' | 'printers' | 'reports' | 'tables' | 'backup' | 'settings' | 'receipt'>('emp');
+  const [tab, setTab] = useState<'emp' | 'perm' | 'menu' | 'dlv' | 'stock' | 'po' | 'branches' | 'count' | 'printers' | 'reports' | 'tables' | 'backup' | 'settings' | 'receipt' | 'loginlog' | 'system'>('emp');
   const logout = () => { sessionStorage.removeItem(TOKEN_KEY); setAuthed(false); };
   if (!authed) return <Login onDone={() => setAuthed(true)} />;
   return (
